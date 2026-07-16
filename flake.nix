@@ -48,6 +48,11 @@
           platforms = platforms.linux;
         };
       };
+
+      apps.default = {
+        type = "app";
+        program = "${self.packages.${system}.default}/bin/wrenc";
+      };
     }
   );
 }
